@@ -6,9 +6,9 @@ import smallIcon from '../assets/CT_-_Copy-removebg-preview.png'
 import Icon from '../assets/logo.png'
 import HCM from '../assets/HCM.png'
 import ERP from '../assets/ERP.png'
-import ERM from '../assets/EPM.png'
+import EPM from '../assets/EPM.png'
 import SCm from '../assets/SCm.png'
-import {BsArrowRightCircleFill,BsArrowLeftCircleFill} from 'react-icons/bs'
+import {BsArrowRightCircle,BsArrowLeftCircle} from 'react-icons/bs'
 // import {FaGridP} from 'react-icons/fa'
 
 const SideBar = () => {
@@ -19,7 +19,7 @@ const SideBar = () => {
     <SideBarStyled className='d-flex flex-column ' style={{width:`${isCollapse ? '100px':'max-content'}`}}>
         <div className='logo d-flex justify-content-between align-items-center py-3'>
            {isCollapse ? <img className='small'  src={smallIcon} alt=""  /> : <img className='large mx-2' src={Icon} alt=""  />}
-           {isCollapse ?<BsArrowRightCircleFill size={20} role='button' color='#fff' className='mx-2' onClick={()=>setIsCollapse(false)}/> :<BsArrowLeftCircleFill  size={20} role='button'  color='#fff' className='mx-2' onClick={()=>setIsCollapse(true)}/>}
+           {isCollapse ?<div className='right-arrow position-absolute '><BsArrowRightCircle  size={20} role='button' color='#000' className='mx-2 rounded-pill bg-light' onClick={()=>setIsCollapse(false)}/> </div >:<div className='left-arrow position-absolute '><BsArrowLeftCircle   size={20} role='button'  color='#000' className='mx-2 rounded-pill bg-light' onClick={()=>setIsCollapse(true)}/></div>}
         </div>
         <hr className='text-light p-0 m-0'/>
         <div className="options px-2 py-4">
@@ -50,7 +50,7 @@ const SideBar = () => {
                 <div className="category mx-2 ">
                     <div className={`d-flex  p-1 rounded  ${isCollapse && 'justify-content-center'}`}>
                         <div onClick={()=>setIsCollapse(false)}>
-                            <img className='icon' src={ERM} alt="" />
+                            <img className='icon' src={EPM} alt="" />
                         </div>
                        { !isCollapse  && <div>
                             <span className='mx-2 text-secondary'>Camptra Admin Management</span>
@@ -67,7 +67,7 @@ const SideBar = () => {
                         </div>}
                     </div>
                 </div>
-                <div className="category mx-2  my-2">
+                {/* <div className="category mx-2  my-2">
                     <div className={`d-flex  p-1 rounded  ${isCollapse && 'justify-content-center'}`}>
                         <div onClick={()=>setIsCollapse(false)}>
                             <img className='icon' src={HCM} alt="" />
@@ -76,7 +76,7 @@ const SideBar = () => {
                             <span className='mx-2 text-secondary'>Settings</span>
                         </div>}
                     </div>
-                </div>
+                </div> */}
                 
             </div>
         </div>

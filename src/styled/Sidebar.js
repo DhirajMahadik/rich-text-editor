@@ -12,6 +12,12 @@ const SideBarStyled = styled.div`
         .large{
             width: 150px;
         }
+        .left-arrow{
+            left: 270px;
+        }
+        .right-arrow{
+            left: 82px;
+        }
     }
 
     .options{

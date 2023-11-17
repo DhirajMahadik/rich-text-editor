@@ -76,7 +76,7 @@ function Home() {
     return (
         <><div className="d-flex">
 
-                <SideBar/>
+           <SideBar/>
 
             <div className="d-flex flex-column px-2">
                 {!isCreate && <div className="p-3 d-flex justify-content-center">
