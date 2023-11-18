@@ -40,6 +40,12 @@ const SideBarStyled = styled.div`
         
     }
 
+    @media  (max-width: 650px){
+        .right-arrow{
+            left: 45px !important;
+        }
+    }
+
     
 `;
 
